@@ -38,9 +38,9 @@ public class LeakMemoryActivity extends Activity {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                Log.i("performanceMemory", "worker thread start sleep");
+                Log.d("performanceMemory", "worker thread start sleep");
                 ThreadUtil.sleepAWhile(19 * 1000);
-                Log.i("performanceMemory", "worker thread stop sleep");
+                Log.d("performanceMemory", "worker thread stop sleep");
             }
         }).start();
     }

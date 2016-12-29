@@ -1,4 +1,4 @@
-package com.example.michael.testperformance;
+package com.example.debugPerformance;
 
 import android.content.Context;
 
@@ -39,7 +39,7 @@ public class AppBlockCanaryContext extends BlockCanaryContext {
     }
 
 //    private static final int BLOCK_THRESHOLD = 500;
-    private static final int BLOCK_THRESHOLD = 2000;
+    private static final int BLOCK_THRESHOLD = 1000;
 
     @Override
     public int provideBlockThreshold() {
@@ -107,23 +107,4 @@ public class AppBlockCanaryContext extends BlockCanaryContext {
 
     }
 
-    /*
-    @Override
-    public int getConfigBlockThreshold() {
-//        return super.getConfigBlockThreshold();
-        return 500;
-    }
-
-    @Override
-    public boolean isNeedDisplay() {
-//        return super.isNeedDisplay();
-        return true;
-    }
-
-    @Override
-    public String getLogPath() {
-//        return super.getLogPath();
-        return "/blockcanary/performance";
-    }
-    */
 }

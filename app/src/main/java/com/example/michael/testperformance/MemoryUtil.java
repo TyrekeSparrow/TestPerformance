@@ -13,7 +13,7 @@ public class MemoryUtil {
     public static void printMemory() {
         long memoryBytes = Runtime.getRuntime().totalMemory();
         
-        Log.i("performanceMemory", "memoryMBs = " + (memoryBytes / 1024 / 1024) + " MBs");
+        Log.d("performanceMemory", "memoryMBs = " + (memoryBytes / 1024 / 1024) + " MBs");
     }
 
     public static void printMemoryLoop() {

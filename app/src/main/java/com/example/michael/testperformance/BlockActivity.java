@@ -1,14 +1,11 @@
 package com.example.michael.testperformance;
 
-import android.app.Service;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.telephony.TelephonyManager;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class BlockActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,14 +17,19 @@ public class MainActivity extends AppCompatActivity {
         blockMainThread();
     }
 
+    private static final long time = 2 * 1000;
+
     private void blockMainThread() {
         // block situations
         // 1 main thread sleep
-        ThreadUtil.sleepAWhile(1 * 1000);
+        ThreadUtil.sleepAWhile(time);
     }
 
     public void startLeakMemoryActivity(View view) {
         Intent intent = new Intent(this, LeakMemoryActivity.class);
         startActivity(intent);
+    }
+
+    public void test(View view) {
     }
 }
